@@ -1,0 +1,1 @@
+# This will be a template repo for DOTNET 6 Projects. 
