@@ -1,1 +1,2 @@
-# This will be a template repo for DOTNET 6 Projects. 
+# To-do list
+_Made in DOTNET 6. This is a project I made for learning purposes only._
