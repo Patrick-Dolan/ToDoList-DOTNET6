@@ -15,6 +15,8 @@ namespace ProjectName
 
       app.UseHttpsRedirection();
 
+      app.UseStaticFiles();
+
       app.UseRouting();
 
       app.MapControllerRoute(
