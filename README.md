@@ -16,7 +16,7 @@ This project is a basic To-do list built with .NET 6 to update my knowledge of t
 
 The project, in its current state, now allows you to create categories and attach items to them. You can't create Items without an attached category. 
 
-## Setup/Installation Requirements
+## Set up/Installation Requirements
 
 ### How to download and run the project
 
@@ -28,7 +28,7 @@ git clone https://github.com/Patrick-Dolan/ToDoList-DOTNET6
 
 - Alternatively, you can download the project using the green "Code" button at the top of the GitHub page that the project is located on. Then, click the Download ZIP button on the dropdown to save the project to your computer. Once you have downloaded the zip file you will need to unzip it and move on to step two.
 
-2. Now that you have downloaded the project files you will need to navigate to the ```ToDoList-DOTNET6 folder```. Once inside this folder navigate to the `ToDoList`.Solution``` folder and run the following command:
+2. Now that you have the project files you will need to navigate to the ```ToDoList-DOTNET6 folder```. Once inside this folder navigate to the `ToDoList`.Solution``` folder and run the following command to download the project dependencies:
 
 ```bash
 dotnet restore
@@ -45,17 +45,25 @@ dotnet build
 ```bash
 dotnet run
 ```
+
 - **Note: the URL where you can view the application in your web browser should show up in the terminal.**
 - Alternatively, if you are working on developing features for the project you can run the command ```dotnet watch run``` which will reload the project as you make changes.
 
-### How to test the project
+### How to run the project tests
 
-1. Open the repo on your editor of choice/terminal
-2. Navigate to ToDoList.Tests directory in your terminal
-3. Run the following command to set up testing:
-```dotnet restore```
-4. Run tests in your terminal with the following command:
-```dotnet test```
+1. Open the project on your editor/terminal of choice.
+2. Navigate to ```ToDoList.Tests``` directory in your terminal
+3. Run the following command to download the project dependencies and set up testing:
+
+```bash
+dotnet restore
+```
+
+4. Now you can run the tests in your terminal with the following command:
+
+```bash
+dotnet test
+```
 
 ## Known Bugs
 
