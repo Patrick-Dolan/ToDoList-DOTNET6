@@ -28,7 +28,7 @@ git clone https://github.com/Patrick-Dolan/ToDoList-DOTNET6
 
 - Alternatively, you can download the project using the green "Code" button at the top of the GitHub page that the project is located on. Then, click the Download ZIP button on the dropdown to save the project to your computer. Once you have downloaded the zip file you will need to unzip it and move on to step two.
 
-2. Now that you have the project files you will need to navigate to the ```ToDoList-DOTNET6 folder```. Once inside this folder navigate to the `ToDoList`.Solution``` folder and run the following command to download the project dependencies:
+2. Now that you have the project files you will need to navigate to the ```ToDoList-DOTNET6``` folder. Once inside this folder navigate to the ```ToDoList.Solution``` folder and run the following command to download the project dependencies:
 
 ```bash
 dotnet restore
