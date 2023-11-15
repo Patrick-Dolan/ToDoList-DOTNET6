@@ -18,6 +18,8 @@ The project, in its current state, now allows you to create categories and attac
 
 ## Set up/Installation Requirements
 
+_This project currently uses manually created tables in MySQL workbench. I'll be refactoring the project to use Entity framework soon so I won't be adding instructions on how to create them._
+
 ### How to download and run the project
 
 1. Open a terminal/command prompt and navigate to the directory where you want to store the project. Use the following GIT command to clone the project repository:
@@ -73,4 +75,4 @@ dotnet test
 
 MIT
 
-Copyright (c) _2023_ _Patrick Dolan_
+Copyright (c) _2023_ _Patrick Dolan_ 
