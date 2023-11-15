@@ -9,6 +9,8 @@
 * _C#_
 * _.NET 6_
 * _MSTest_
+* _Entity Framework Core
+* _MySQL Workbench
 
 ## Description
 
@@ -18,7 +20,33 @@ The project, in its current state, now allows you to create categories and attac
 
 ## Set up/Installation Requirements
 
-_This project currently uses manually created tables in MySQL workbench. I'll be refactoring the project to use Entity framework soon so I won't be adding instructions on how to create them._
+### How to set up the database
+
+1. Create a new file in the production project directory: ```ToDoList/``` and call it ```appsettings.json```. This file will hold the connection string for your database.
+
+2. Add the following contents to your newly created ```appsettings.json``` file, replacing the following values with your own:
+  - ```[YOUR-USER-HERE]``` with your username
+  - ```[YOUR-PASSWORD-HERE]``` with your password
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_ef_core;uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
+  }
+}
+```
+
+For example, your ```appsettings.json``` might look like this:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_ef_core;uid=adalovelace;pwd=theCountessKing1;"
+  }
+}
+```
+
+<!-- TODO Add rest of database instructions including importing into MySQL workbench -->
 
 ### How to download and run the project
 
