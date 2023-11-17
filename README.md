@@ -9,8 +9,8 @@
 * _C#_
 * _.NET 6_
 * _MSTest_
-* _Entity Framework Core
-* _MySQL Workbench
+* _Entity Framework Core_
+* _MySQL Workbench_
 
 ## Description
 
