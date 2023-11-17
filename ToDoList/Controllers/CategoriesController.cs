@@ -38,5 +38,19 @@ namespace ToDoList.Controllers
       Category thisCategory = _db.Categories.FirstOrDefault(category => category.CategoryId == id);
       return View(thisCategory);
     }
+
+    public ActionResult Edit(int id)
+    {
+      Category thisCategory = _db.Categories.FirstOrDefault(category => category.CategoryId == id);
+      return View(thisCategory);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Category category)
+    {
+      _db.Categories.Update(category);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
