@@ -20,9 +20,21 @@ The project, in its current state, now allows you to create categories and attac
 
 ## Set up/Installation Requirements
 
+### How to Download the Project
+
+1. Open a terminal/command prompt and navigate to the directory where you want to store the project. Use the following GIT command to clone the project repository:
+
+```bash
+git clone https://github.com/Patrick-Dolan/ToDoList-DOTNET6
+```
+
+- Alternatively, you can download the project using the green "Code" button at the top of the GitHub page that the project is located on. Then, click the Download ZIP button on the dropdown to save the project to your computer. Once you have downloaded the zip file you will need to unzip it and move on to the instructions on setting up the database/project.
+
 ### How to set up the database
 
-1. Create a new file in the production project directory: ```ToDoList/``` and call it ```appsettings.json```. This file will hold the connection string for your database.
+_The following instructions assume you have downloaded the project to your computer._
+
+1. Create a new file in the production project directory: ```ToDoList-DOTNET6/ToDoList/``` and call it ```appsettings.json```. This file will hold the connection string for your database.
 
 2. Add the following contents to your newly created ```appsettings.json``` file, replacing the following values with your own:
   - ```[YOUR-USER-HERE]``` with your username
@@ -53,34 +65,28 @@ For example, your ```appsettings.json``` might look like this:
 5. In Import Options select ```Import from Self-Contained File``` and navigate to this project's root directory to select the database file: ```to_do_list_with_ef_core.sql```. 
 
 6. Under the ```Default Schema to be Imported To``` select the ```New``` button.
-7. Enter the name of the database, for example, ```to_do_list_with_ef_core``` and click ```Ok``` to build the database. 
+7. Enter the name of the database, for example, ```to_do_list_with_ef_core``` and click ```Ok``` then click the ```Start Import``` button to build the database. 
   - **NOTE: This name must match the name of the database in your ```appsettings.json```.**
 
-7. After you are finished with the above steps, reopen the navigator ```Schemas``` tab. Right-click and select ```Refresh All```. The database should appear in the list of Schemas.
+8. After you are finished with the above steps, reopen the navigator ```Schemas``` tab. Right-click and select ```Refresh All```. The database should appear in the list of Schemas.
 
 ### How to download and run the project
 
-1. Open a terminal/command prompt and navigate to the directory where you want to store the project. Use the following GIT command to clone the project repository:
+_The following instructions assume you have downloaded the project to your computer._
 
-```bash
-git clone https://github.com/Patrick-Dolan/ToDoList-DOTNET6
-```
-
-- Alternatively, you can download the project using the green "Code" button at the top of the GitHub page that the project is located on. Then, click the Download ZIP button on the dropdown to save the project to your computer. Once you have downloaded the zip file you will need to unzip it and move on to step two.
-
-2. Now that you have the project files you will need to navigate to the ```ToDoList-DOTNET6``` folder. Once inside this folder navigate to the ```ToDoList``` folder and run the following command to download the project dependencies:
+1. Now that you have the project files you will need to navigate to the ```ToDoList-DOTNET6``` folder. Once inside this folder navigate to the ```ToDoList``` folder and run the following command to download the project dependencies:
 
 ```bash
 dotnet restore
 ```
 
-3. Now that you have downloaded the dependencies you will need to run the following command to build the project:
+2. Now that you have downloaded the dependencies you will need to run the following command to build the project:
 
 ```bash
 dotnet build
 ```
 
-4. Once the build is complete the final step is to run the project using the following command:
+3. Once the build is complete the final step is to run the project using the following command:
 
 ```bash
 dotnet run
@@ -89,7 +95,9 @@ dotnet run
 - **Note: the URL where you can view the application in your web browser should show up in the terminal.**
 - Alternatively, if you are working on developing features for the project you can run the command ```dotnet watch run``` which will reload the project as you make changes.
 
-### How to run the project tests
+### How to run the project tests  
+
+**CURRENTLY TESTS DO NOT WORK**
 
 1. Open the project on your editor/terminal of choice.
 2. Navigate to ```ToDoList.Tests``` directory in your terminal
