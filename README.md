@@ -50,9 +50,13 @@ For example, your ```appsettings.json``` might look like this:
 
 4. Select the ```Data Import/Restore``` option to launch the window needed to import the database.
 
-5. In Import Options select ```Import from Self-Contained File``` and navigate to this project's root directory to select the database file: ```to_do_list_with_ef_core.sql```. Then click ok.
+5. In Import Options select ```Import from Self-Contained File``` and navigate to this project's root directory to select the database file: ```to_do_list_with_ef_core.sql```. 
 
-6. After you are finished with the above steps, reopen the navigator ```Schemas``` tab. Right-click and select Refresh All. The database should appear in the list of Schemas.
+6. Under the ```Default Schema to be Imported To``` select the ```New``` button.
+7. Enter the name of the database, for example, ```to_do_list_with_ef_core``` and click ```Ok``` to build the database. 
+  - **NOTE: This name must match the name of the database in your ```appsettings.json```.**
+
+7. After you are finished with the above steps, reopen the navigator ```Schemas``` tab. Right-click and select ```Refresh All```. The database should appear in the list of Schemas.
 
 ### How to download and run the project
 
