@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using ToDoList.Models;
@@ -35,7 +36,9 @@ namespace ToDoList.Controllers
 
     public ActionResult Details(int id)
     {
-      Category thisCategory = _db.Categories.FirstOrDefault(category => category.CategoryId == id);
+      Category thisCategory = _db.Categories
+        .Include(category => category.Items)
+        .FirstOrDefault(category => category.CategoryId == id);
       return View(thisCategory);
     }
 
