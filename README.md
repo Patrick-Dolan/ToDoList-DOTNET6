@@ -46,7 +46,13 @@ For example, your ```appsettings.json``` might look like this:
 }
 ```
 
-<!-- TODO Add rest of database instructions including importing into MySQL workbench -->
+3. Now you will need to launch MySQL Workbench and open your local instance. On the left side of the window is the navigator pane and at the bottom of that is a tab labeled ```Administration```. Select that tab to show the options needed to import this project's database. 
+
+4. Select the ```Data Import/Restore``` option to launch the window needed to import the database.
+
+5. In Import Options select ```Import from Self-Contained File``` and navigate to this project's root directory to select the database file: ```to_do_list_with_ef_core.sql```. Then click ok.
+
+6. After you are finished with the above steps, reopen the navigator ```Schemas``` tab. Right-click and select Refresh All. The database should appear in the list of Schemas.
 
 ### How to download and run the project
 
