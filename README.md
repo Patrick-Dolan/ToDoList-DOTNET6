@@ -6,11 +6,11 @@
 
 ## Technologies Used
 
-* _C#_
-* _.NET 6_
-* _MSTest_
-* _Entity Framework Core_
-* _MySQL Workbench_
+* C#
+* .NET 6
+* MSTest
+* Entity Framework Core
+* MySQL Workbench
 
 ## Description
 
@@ -22,23 +22,45 @@ The project, in its current state, now allows you to create categories and attac
 
 ### How to Download the Project
 
-1. Open a terminal/command prompt and navigate to the directory where you want to store the project. Use the following GIT command to clone the project repository:
+Choose one of the following methods to download the project:
+
+#### Method 1: Clone the Repository
+
+1. Open a terminal/command prompt and navigate to the directory where you want to store the project.
+2. Use the following Git command to clone the project repository:
 
 ```bash
 git clone https://github.com/Patrick-Dolan/ToDoList-DOTNET6
 ```
 
-- Alternatively, you can download the project using the green "Code" button at the top of the GitHub page that the project is located on. Then, click the Download ZIP button on the dropdown to save the project to your computer. Once you have downloaded the zip file you will need to unzip it and move on to the instructions on setting up the database/project.
+This will create a local copy of the project in your chosen directory.
+
+#### Method 2: Download as ZIP
+
+1. Alternatively, you can download the project directly from the GitHub page.
+2. Click on the green "Code" button at the top of the GitHub page.
+3. Choose "Download ZIP" from the dropdown menu.
+4. Save the ZIP file to your computer.
+5. Unzip the downloaded file to extract the project files.
+
+Regardless of the method you choose, proceed to the next set of instructions to set up the database and configure the project.
 
 ### How to set up the database
 
-_The following instructions assume you have downloaded the project to your computer._
+_The following instructions assume you have downloaded the project to your computer and have MySQL Workbench._
 
-1. Create a new file in the production project directory: ```ToDoList-DOTNET6/ToDoList/``` and call it ```appsettings.json```. This file will hold the connection string for your database.
+1. Ensure that you have Entity Framework Core (EF Core) tools installed globally. If not, you can install it using the following command:
 
-2. Add the following contents to your newly created ```appsettings.json``` file, replacing the following values with your own:
+```bash
+dotnet tool install --global dotnet-ef --version 6.0.0
+```
+
+
+2. Navigate to the production project directory: ToDoList-DOTNET6/ToDoList/ and create a new file named appsettings.json. This file will contain the connection string for your database.
   - ```[YOUR-USER-HERE]``` with your username
   - ```[YOUR-PASSWORD-HERE]``` with your password
+
+3. Add the following contents to your newly created appsettings.json file, replacing the placeholders with your information:
 
 ```json
 {
@@ -58,19 +80,15 @@ For example, your ```appsettings.json``` might look like this:
 }
 ```
 
-3. Now you will need to launch MySQL Workbench and open your local instance. On the left side of the window is the navigator pane and at the bottom of that is a tab labeled ```Administration```. Select that tab to show the options needed to import this project's database. 
+4. Open a terminal and run the following command to apply EF Core migrations and create the database:
 
-4. Select the ```Data Import/Restore``` option to launch the window needed to import the database.
+```bash
+dotnet ef database update
+```
 
-5. In Import Options select ```Import from Self-Contained File``` and navigate to this project's root directory to select the database file: ```to_do_list_with_ef_core.sql```. 
+This will automatically apply any pending migrations and create the database using the connection string specified in appsettings.json.
 
-6. Under the ```Default Schema to be Imported To``` select the ```New``` button.
-7. Enter the name of the database, for example, ```to_do_list_with_ef_core``` and click ```Ok``` then click the ```Start Import``` button to build the database. 
-  - **NOTE: This name must match the name of the database in your ```appsettings.json```.**
-
-8. After you are finished with the above steps, reopen the navigator ```Schemas``` tab. Right-click and select ```Refresh All```. The database should appear in the list of Schemas.
-
-### How to download and run the project
+### How to run the project
 
 _The following instructions assume you have downloaded the project to your computer._
 
@@ -95,9 +113,9 @@ dotnet run
 - **Note: the URL where you can view the application in your web browser should show up in the terminal.**
 - Alternatively, if you are working on developing features for the project you can run the command ```dotnet watch run``` which will reload the project as you make changes.
 
-### How to run the project tests  
+### How to run the project tests
 
-**CURRENTLY TESTS DO NOT WORK**
+#### _TESTS CURRENTLY DO NOT WORK_
 
 1. Open the project on your editor/terminal of choice.
 2. Navigate to ```ToDoList.Tests``` directory in your terminal
@@ -119,6 +137,6 @@ dotnet test
 
 ## License
 
-MIT
+[MIT](./LICENSE.txt)
 
 Copyright (c) _2023_ _Patrick Dolan_ 
