@@ -10,6 +10,7 @@
 * .NET 6
 * MSTest
 * Entity Framework Core
+* ASP.NET Core Identity
 * MySQL Workbench
 
 ## Description
@@ -65,7 +66,7 @@ dotnet tool install --global dotnet-ef --version 6.0.0
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_ef_core;uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
+    "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_auth;uid=[YOUR-USER-HERE];pwd=[YOUR-PASSWORD-HERE];"
   }
 }
 ```
@@ -75,7 +76,7 @@ For example, your ```appsettings.json``` might look like this:
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_ef_core;uid=adalovelace;pwd=theCountessKing1;"
+    "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list_with_auth;uid=adalovelace;pwd=theCountessKing1;"
   }
 }
 ```
